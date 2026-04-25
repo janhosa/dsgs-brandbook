@@ -1,0 +1,1284 @@
+<!DOCTYPE html><html data-src-ver="0d58d190" lang="de"><head>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSGS Brandbook 2026</title>
+  <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="#DDB85C"/><g transform="translate(120,90)" fill="#1a1a1a" font-family="serif"><text x="80" y="50" text-anchor="middle" font-size="28" font-style="italic">DSGS</text><text x="80" y="85" text-anchor="middle" font-size="14" letter-spacing="2">BRANDBOOK</text><text x="80" y="108" text-anchor="middle" font-size="12" letter-spacing="2">2026</text></g></svg></template>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="colors_and_type.css">
+  <style>
+    :root {
+      --gold: #DDB85C; --orange: #D97757; --terracotta: #C17B6B;
+      --peach: #D8A391; --sand: #D6C9B0; --cream: #E8DCC8;
+      --teal: #81A1AC; --sage: #A7BAA0; --ocean: #5B8BA0;
+      --ink: #1A1A1A; --ink-mid: #4A4A4A; --ink-light: #888;
+      --white: #FFFFFF;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 8px 24px rgba(0,0,0,0.12);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Wix Madefor Text', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--cream); color: var(--ink); font-size: 16px; line-height: 1.65; }
+
+    /* NAV */
+    nav.topnav { position: sticky; top: 0; z-index: 100; background: var(--ink); padding: 0 48px; display: flex; align-items: center; gap: 28px; height: 52px; overflow-x: auto; }
+    nav.topnav a { color: var(--sand); text-decoration: none; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; transition: color 0.2s; }
+    nav.topnav a:hover { color: var(--gold); }
+    nav.topnav .nav-logo { color: var(--gold); margin-right: auto; font-size: 13px; letter-spacing: 0.05em; font-weight: 700; }
+
+    /* COVER */
+    .cover { background: var(--gold); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px 48px; position: relative; overflow: hidden; }
+    .cover::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 30%, var(--orange) 0%, transparent 55%), radial-gradient(ellipse at 20% 80%, var(--terracotta) 0%, transparent 50%); opacity: 0.35; pointer-events: none; }
+    .cover-logo { width: 180px; height: 180px; position: relative; z-index: 1; filter: drop-shadow(0 4px 24px rgba(0,0,0,0.2)); }
+    .cover h1 { font-family: var(--font-display); font-size: clamp(32px,5vw,60px); font-weight: 400; color: var(--white); margin-top: 40px; position: relative; z-index: 1; line-height: 1.15; }
+    .cover-tagline { font-size: 18px; color: rgba(255,255,255,0.9); margin-top: 16px; font-style: italic; position: relative; z-index: 1; }
+    .cover-meta { margin-top: 48px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); position: relative; z-index: 1; }
+
+    /* SECTIONS */
+    section { padding: 96px 48px; max-width: 1200px; margin: 0 auto; }
+    .band { padding: 96px 48px; }
+    .band-inner { max-width: 1200px; margin: 0 auto; }
+    hr.div { border: none; border-top: 1px solid var(--sand); margin: 0; }
+    .label { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 12px; }
+    h2 { font-family: var(--font-display); font-size: clamp(28px,3.5vw,44px); font-weight: 400; color: var(--ink); margin-bottom: 8px; line-height: 1.2; }
+    h3 { font-family: var(--font-body); font-size: 18px; font-weight: 500; color: var(--ink); margin-bottom: 12px; }
+    .intro { font-size: 18px; color: var(--ink-mid); max-width: 640px; margin-bottom: 56px; line-height: 1.7; }
+    p { margin-bottom: 16px; color: var(--ink-mid); }
+
+    /* ÜBER */
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .pull-quote { font-family: var(--font-display); font-size: clamp(20px,2.5vw,30px); font-style: italic; color: var(--orange); line-height: 1.4; border-left: 4px solid var(--gold); padding-left: 24px; }
+
+    /* WERTE */
+    .band-dark { background: var(--ink); }
+    .band-dark .label { color: rgba(255,255,255,0.35); }
+    .band-dark h2 { color: var(--gold); }
+    .band-dark .intro { color: rgba(255,255,255,0.65); }
+    .werte-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; margin-top: 48px; }
+    .wert { background: #1e1e1e; padding: 40px 28px; border-top: 3px solid; }
+    .wert:nth-child(1) { border-color: var(--gold); }
+    .wert:nth-child(2) { border-color: var(--orange); }
+    .wert:nth-child(3) { border-color: var(--sage); }
+    .wert:nth-child(4) { border-color: var(--teal); }
+    .wert-icon { font-size: 28px; margin-bottom: 16px; }
+    .wert h3 { color: #fff; font-size: 15px; margin-bottom: 6px; font-weight: 500; }
+    .wert p { color: rgba(255,255,255,0.55); font-size: 13px; margin: 0; }
+
+    /* LOGO */
+    .logo-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-bottom: 40px; }
+    .lv { border-radius: 16px; padding: 48px 24px; display: flex; flex-direction: column; align-items: center; gap: 16px; min-height: 240px; justify-content: center; }
+    .lv img { width: 140px; height: 140px; object-fit: contain; }
+    .lv span { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+    .lv-light { background: var(--cream); border: 1px solid var(--sand); }
+    .lv-light span { color: var(--ink-light); }
+    .lv-orange { background: var(--orange); }
+    .lv-orange span { color: rgba(255,255,255,0.8); }
+    .lv-dark { background: var(--ink); }
+    .lv-dark span { color: rgba(255,255,255,0.5); }
+    .lv-terracotta { background: var(--terracotta); }
+    .lv-terracotta span { color: rgba(255,255,255,0.8); }
+    .lv-gold { background: var(--gold); }
+    .lv-gold span { color: rgba(255,255,255,0.9); }
+
+    .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    .rule { background: #fff; border-radius: 16px; padding: 32px; border-top: 4px solid; }
+    .rule.do { border-color: var(--sage); }
+    .rule.dont { border-color: var(--terracotta); }
+    .rule h4 { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
+    .rule.do h4 { color: #3d6b4a; }
+    .rule.dont h4 { color: var(--terracotta); }
+    .rule ul { list-style: none; }
+    .rule ul li { padding: 7px 0; font-size: 13px; color: var(--ink-mid); border-bottom: 1px solid var(--cream); }
+    .rule ul li:last-child { border-bottom: none; }
+
+    /* FARBEN */
+    .band-white { background: #fff; }
+    .farb-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 12px; margin-bottom: 32px; }
+    .farb-grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-bottom: 40px; }
+    .swatch { border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); }
+    .swatch .cb { height: 84px; }
+    .swatch .ci { padding: 12px 14px; background: #fff; }
+    .swatch .cn { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+    .swatch .ch { font-size: 10px; color: var(--ink-light); font-family: monospace; line-height: 1.5; }
+    .farb-use { background: var(--cream); border-radius: 16px; padding: 32px; display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .farb-use h4 { font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--ink); }
+    .farb-use p { font-size: 13px; color: var(--ink-mid); margin: 0; }
+
+    /* TYPO */
+    .typo-list { display: flex; flex-direction: column; gap: 0; }
+    .typo-row { display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: start; padding: 40px 0; border-bottom: 1px solid var(--sand); }
+    .typo-row:last-child { border-bottom: none; }
+    .tm .tl { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 6px; }
+    .tm .ts { font-size: 12px; color: var(--ink-mid); line-height: 1.8; }
+    .th1 { font-family: var(--font-display); font-size: 52px; font-weight: 400; line-height: 1.1; color: var(--ink); }
+    .th2 { font-family: var(--font-display); font-size: 38px; font-weight: 400; line-height: 1.2; color: var(--ink); }
+    .th3 { font-family: var(--font-body); font-size: 24px; font-weight: 500; line-height: 1.3; color: var(--ink); }
+    .th4 { font-family: var(--font-body); font-size: 18px; font-weight: 500; color: var(--ink); }
+    .th5 { font-family: var(--font-body); font-size: 14px; font-weight: 500; color: var(--ink); }
+    .th6 { font-family: var(--font-body); font-size: 12px; font-weight: 500; color: var(--ink); }
+    .tbody { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--ink-mid); }
+    .tsmall { font-family: var(--font-body); font-size: 12px; color: var(--ink-mid); }
+    .tlbl { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-light); }
+    .talt { font-family: 'Inter', system-ui, sans-serif; font-size: 16px; color: var(--ink-mid); }
+
+    /* ICONS */
+    .band-sand { background: var(--sand); }
+    .principles { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-bottom: 56px; }
+    .princ { background: #fff; border-radius: 16px; padding: 28px; box-shadow: var(--shadow-sm); }
+    .princ .pi { font-size: 26px; margin-bottom: 14px; }
+    .princ h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; color: var(--ink); }
+    .princ p { font-size: 13px; color: var(--ink-mid); margin: 0; }
+
+    /* KURS ICONS — native 1280×477 aspect ratio, no crop */
+    .kurs-icon-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-bottom: 56px; }
+    .kurs-icon { text-align: center; }
+    .kurs-icon__box {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      aspect-ratio: 1280 / 477;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .kurs-icon__box img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+    .kurs-icon__label { margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--ink); letter-spacing: 0.02em; }
+
+    /* FOTO GRID */
+    .foto-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 40px; }
+    .foto-gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; display: block; }
+
+    .foto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .foto { background: #fff; border-radius: 16px; padding: 28px; border-left: 4px solid; }
+    .foto.fdo { border-color: var(--sage); }
+    .foto.fdont { border-color: var(--terracotta); }
+    .foto h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+    .foto.fdo h4 { color: #3d6b4a; }
+    .foto.fdont h4 { color: var(--terracotta); }
+    .foto ul { list-style: none; }
+    .foto ul li { padding: 5px 0; font-size: 13px; color: var(--ink-mid); }
+
+    /* VOICE */
+    .voice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px; }
+    .vc { background: #fff; border-radius: 16px; padding: 28px; border-top: 4px solid; }
+    .vc.vcy { border-color: var(--sage); }
+    .vc.vcn { border-color: var(--terracotta); }
+    .vc h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
+    .vc.vcy h4 { color: #3d6b4a; }
+    .vc.vcn h4 { color: var(--terracotta); }
+    .ve { background: var(--cream); border-radius: 8px; padding: 14px; margin-bottom: 10px; font-size: 14px; font-style: italic; color: var(--ink); line-height: 1.5; }
+    .pillars { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 40px; }
+    .pillar { background: var(--cream); border-radius: 16px; padding: 24px; text-align: center; }
+    .pillar .pw { font-family: var(--font-display); font-size: 22px; color: var(--orange); margin-bottom: 6px; display: block; }
+    .pillar p { font-size: 13px; color: var(--ink-mid); margin: 0; }
+
+    /* GESTALTUNG */
+    .band-cream { background: var(--cream); }
+    .gest-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .gc { background: #fff; border-radius: 16px; padding: 28px; box-shadow: var(--shadow-sm); }
+    .gc .gn { font-family: var(--font-display); font-size: 44px; color: var(--sand); line-height: 1; margin-bottom: 14px; display: block; }
+    .gc h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; color: var(--ink); }
+    .gc p { font-size: 13px; color: var(--ink-mid); margin: 0; }
+
+    /* ANWENDUNG */
+    .anw-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 48px; margin-bottom: 48px; }
+    .ac { border-radius: 20px; overflow: hidden; box-shadow: 0 16px 48px rgba(0,0,0,0.2); }
+    .ac-head { padding: 0; position: relative; overflow: hidden; height: 200px; }
+    .ac-head img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .ac-badge { display: inline-block; background: rgba(255,255,255,0.95); color: var(--ink); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; position: absolute; top: 16px; right: 16px; z-index: 2; }
+    .ac-body { background: #fff; padding: 22px 28px 26px; }
+    .ac-body .meta { font-size: 12px; color: var(--ink-light); margin-bottom: 8px; }
+    .ac-body h4 { font-family: var(--font-display); font-size: 22px; font-weight: 400; color: var(--ink); margin-bottom: 10px; line-height: 1.25; }
+    .ac-body p { font-size: 13px; color: var(--ink-mid); margin-bottom: 14px; }
+    .cta { display: inline-block; padding: 9px 18px; border-radius: 24px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; text-decoration: none; }
+
+    .hero-ex { background: var(--orange); border-radius: 20px; padding: 72px 56px; text-align: center; position: relative; overflow: hidden; }
+    .hero-ex::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 75% 25%, var(--gold) 0%, transparent 50%); opacity: 0.35; pointer-events: none; }
+    .hero-ex h3 { font-family: var(--font-display); font-size: 44px; font-weight: 400; color: #fff; margin-bottom: 14px; line-height: 1.2; position: relative; z-index: 1; }
+    .hero-ex p { font-size: 17px; color: rgba(255,255,255,0.9); margin-bottom: 28px; position: relative; z-index: 1; }
+    .hero-btns { display: flex; gap: 14px; justify-content: center; position: relative; z-index: 1; flex-wrap: wrap; }
+    .btn-p { background: var(--ink); color: var(--cream); padding: 13px 26px; border-radius: 32px; font-size: 13px; font-weight: 600; border: none; cursor: pointer; font-family: inherit; }
+    .btn-s { background: rgba(255,255,255,0.15); color: #fff; padding: 13px 26px; border-radius: 32px; font-size: 13px; font-weight: 600; border: 1px solid rgba(255,255,255,0.3); cursor: pointer; backdrop-filter: blur(8px); font-family: inherit; }
+
+    /* KONTAKT FINAL */
+    .final-band { background: var(--ink); padding: 120px 48px; text-align: center; }
+    .final-band img { width: 120px; margin-bottom: 32px; }
+    .final-band h2 { color: var(--gold); margin-bottom: 16px; }
+    .final-band p { color: rgba(255,255,255,0.7); font-size: 16px; max-width: 560px; margin: 0 auto 8px; }
+    .final-band a { color: var(--gold); text-decoration: none; font-weight: 600; }
+
+    footer { background: #000; padding: 32px 48px; text-align: center; }
+    footer p { color: rgba(255,255,255,0.35); font-size: 11px; margin: 0; }
+
+    /* WE ARE / WE ARE NOT */
+    .wearenot { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+    .wan { background: #fff; border-radius: 16px; padding: 32px; border-top: 4px solid; }
+    .wan.y { border-color: var(--sage); }
+    .wan.n { border-color: var(--terracotta); }
+    .wan h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
+    .wan.y h4 { color: #3d6b4a; }
+    .wan.n h4 { color: var(--terracotta); }
+    .wan ul { list-style: none; }
+    .wan ul li { padding: 9px 0 9px 24px; font-size: 14px; color: var(--ink-mid); border-bottom: 1px solid var(--cream); position: relative; }
+    .wan ul li:last-child { border-bottom: none; }
+    .wan.y ul li::before { content: '✓'; position: absolute; left: 0; color: #3d6b4a; font-weight: 700; }
+    .wan.n ul li::before { content: '✗'; position: absolute; left: 0; color: var(--terracotta); font-weight: 700; }
+
+    /* 3 SÄTZE */
+    .dreisaetze { background: var(--cream); border-radius: 16px; padding: 40px; margin-top: 40px; }
+    .dreisaetze p { font-family: var(--font-display); font-style: italic; font-size: 20px; color: var(--ink); line-height: 1.5; margin-bottom: 14px; }
+    .dreisaetze p:last-child { margin-bottom: 0; }
+    .dreisaetze p::before { content: '— '; color: var(--orange); }
+
+    /* FOUNDERS */
+    .band-gold { background: var(--gold); }
+    .band-gold .label { color: rgba(0,0,0,0.45); }
+    .band-gold h2 { color: var(--ink); }
+    .band-gold .intro { color: rgba(0,0,0,0.7); }
+    .founder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 40px; }
+    .founder { background: #fff; border-radius: 20px; padding: 40px; box-shadow: var(--shadow-md); }
+    .founder .fname { font-family: var(--font-display); font-size: 30px; font-weight: 400; color: var(--ink); margin-bottom: 4px; line-height: 1.1; }
+    .founder .frole { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin-bottom: 20px; }
+    .founder p { font-size: 14px; color: var(--ink-mid); line-height: 1.6; margin-bottom: 16px; }
+    .founder-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--sand); }
+    .founder-meta h5 { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 8px; }
+    .founder-meta ul { list-style: none; }
+    .founder-meta ul li { font-size: 13px; color: var(--ink); padding: 2px 0; }
+
+    .wendepunkt { background: var(--ink); border-radius: 20px; padding: 48px; margin-top: 40px; text-align: center; color: #fff; }
+    .wendepunkt .wlbl { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .wendepunkt h3 { font-family: var(--font-display); font-size: 30px; font-weight: 400; color: #fff; margin-bottom: 20px; line-height: 1.25; }
+    .wendepunkt p { font-size: 15px; color: rgba(255,255,255,0.8); max-width: 720px; margin: 0 auto 14px; }
+    .wendepunkt blockquote { font-family: var(--font-display); font-style: italic; font-size: 22px; color: var(--gold); margin: 28px auto 12px; max-width: 680px; line-height: 1.5; }
+    .wendepunkt cite { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); font-style: normal; }
+
+    /* 6 KERNWERTE */
+    .kernwerte { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+    .kw { background: #1e1e1e; padding: 32px 28px; border-top: 3px solid; border-radius: 8px; }
+    .kw:nth-child(1) { border-color: var(--gold); }
+    .kw:nth-child(2) { border-color: var(--orange); }
+    .kw:nth-child(3) { border-color: var(--sage); }
+    .kw:nth-child(4) { border-color: var(--teal); }
+    .kw:nth-child(5) { border-color: var(--terracotta); }
+    .kw:nth-child(6) { border-color: var(--peach); }
+    .kw h3 { font-family: var(--font-display); color: #fff; font-size: 22px; margin-bottom: 10px; font-weight: 400; letter-spacing: 0.02em; }
+    .kw p { color: rgba(255,255,255,0.65); font-size: 13px; line-height: 1.6; margin: 0; }
+    .kw p.context { color: rgba(255,255,255,0.45); font-size: 12px; margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08); }
+
+    /* NEVER-SAY LIST */
+    .neverlist { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 32px; }
+    .nv { background: #fff; border-left: 4px solid var(--terracotta); border-radius: 6px; padding: 20px 24px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 24px; align-items: center; }
+    .nv .nterm { font-weight: 600; color: var(--ink); font-size: 14px; }
+    .nv .nterm::before { content: '✗ '; color: var(--terracotta); }
+    .nv .nreason { font-size: 13px; color: var(--ink-mid); line-height: 1.5; }
+
+    /* MESSAGING */
+    .msgpillars { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; margin-bottom: 48px; }
+    .mp { background: #fff; border-radius: 16px; padding: 32px; box-shadow: var(--shadow-sm); border-top: 4px solid var(--orange); }
+    .mp .mph { font-family: var(--font-display); font-size: 22px; color: var(--orange); margin-bottom: 12px; line-height: 1.3; font-weight: 400; }
+    .mp .mpq { font-style: italic; font-size: 15px; color: var(--ink); margin-bottom: 12px; line-height: 1.5; }
+    .mp .mps { font-size: 13px; color: var(--ink-mid); line-height: 1.55; margin: 0; }
+
+    .zgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .zg { background: var(--cream); border-radius: 16px; padding: 28px; }
+    .zg h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+    .zg .zhead { font-family: var(--font-display); font-size: 20px; color: var(--ink); margin-bottom: 10px; font-weight: 400; line-height: 1.3; }
+    .zg p { font-size: 13px; color: var(--ink-mid); margin: 0; line-height: 1.55; }
+
+    .expansion { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    .exp { background: var(--ink); color: #fff; border-radius: 16px; padding: 32px; }
+    .exp .elbl { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .exp h4 { font-family: var(--font-display); color: #fff; font-size: 22px; font-weight: 400; margin-bottom: 14px; }
+    .exp p { color: rgba(255,255,255,0.7); font-size: 13px; line-height: 1.6; margin: 0; }
+
+    /* TONE-BY-CONTEXT */
+    .tone-ctx { display: grid; gap: 16px; margin-top: 32px; }
+    .tc { background: #fff; border-radius: 16px; padding: 28px 32px; box-shadow: var(--shadow-sm); display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: start; }
+    .tc .tchead h4 { font-family: var(--font-display); font-size: 20px; color: var(--ink); margin-bottom: 6px; font-weight: 400; }
+    .tc .tchead p { font-size: 12px; color: var(--ink-mid); line-height: 1.5; margin: 0; }
+    .tc .tcbody { display: grid; gap: 10px; }
+    .tc .tcrow { display: grid; grid-template-columns: 130px 1fr; gap: 16px; font-size: 13px; padding: 7px 0; border-bottom: 1px solid var(--cream); }
+    .tc .tcrow:last-child { border-bottom: none; }
+    .tc .tcrow .tck { color: var(--ink-light); font-weight: 600; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .tc .tcrow .tcv { color: var(--ink); }
+
+    /* TERMINOLOGIE */
+    .termblock { margin-top: 32px; }
+    .termhead { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .termhead h3 { font-family: var(--font-display); font-size: 24px; color: var(--ink); margin: 0; font-weight: 400; }
+    .termhead .tchip { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; border-radius: 12px; }
+    .tchip.must { background: var(--sage); color: #fff; }
+    .tchip.pref { background: var(--gold); color: var(--ink); }
+    .termgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .tr { background: #fff; border-radius: 10px; padding: 18px 22px; display: grid; grid-template-columns: 140px 1fr; gap: 20px; align-items: start; }
+    .tr .tword { font-weight: 700; color: var(--ink); font-size: 14px; }
+    .tr .tnote { font-size: 13px; color: var(--ink-mid); line-height: 1.5; }
+    .tr .tnote em { display: block; font-style: italic; color: var(--orange); margin-top: 6px; font-size: 12px; }
+
+    /* SPRACHMUSTER */
+    .patterns { display: grid; gap: 20px; margin-top: 32px; }
+    .pat { background: #fff; border-radius: 16px; padding: 32px; box-shadow: var(--shadow-sm); border-left: 4px solid var(--gold); }
+    .pat h4 { font-family: var(--font-display); font-size: 22px; color: var(--ink); margin-bottom: 6px; font-weight: 400; }
+    .pat .pdesc { font-size: 13px; color: var(--ink-mid); margin-bottom: 18px; line-height: 1.6; }
+    .pat .pex { background: var(--cream); border-radius: 8px; padding: 14px 18px; margin-top: 10px; font-size: 14px; color: var(--ink); font-style: italic; line-height: 1.5; }
+
+    /* ANTI-PATTERNS */
+    .apgrid { display: grid; gap: 14px; margin-top: 32px; }
+    .ap { background: #fff; border-radius: 14px; padding: 24px 28px; box-shadow: var(--shadow-sm); }
+    .ap .apnum { font-family: var(--font-display); font-size: 14px; color: var(--orange); font-weight: 700; letter-spacing: 0.1em; margin-bottom: 4px; }
+    .ap h4 { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 14px; }
+    .ap .apline { display: grid; grid-template-columns: 24px 1fr; gap: 12px; padding: 8px 0; font-size: 13px; line-height: 1.5; align-items: start; }
+    .ap .apline .apmark { font-weight: 700; padding-top: 1px; }
+    .ap .apline.bad { color: var(--ink-mid); }
+    .ap .apline.bad .apmark { color: var(--terracotta); }
+    .ap .apline.good { color: var(--ink); font-weight: 500; }
+    .ap .apline.good .apmark { color: #3d6b4a; }
+
+    /* CONTENT-BEISPIELE */
+    .cbgrid { display: grid; gap: 28px; margin-top: 32px; }
+    .cb { background: #fff; border-radius: 20px; padding: 40px; box-shadow: var(--shadow-sm); }
+    .cb .cblbl { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+    .cb h4 { font-family: var(--font-display); font-size: 26px; color: var(--ink); margin-bottom: 24px; font-weight: 400; }
+    .cb .cbex { padding: 24px; border-radius: 12px; margin-bottom: 14px; border-left: 4px solid; }
+    .cb .cbex.good { background: #f5f8ef; border-color: var(--sage); }
+    .cb .cbex.bad { background: #fbf0ed; border-color: var(--terracotta); }
+    .cb .cbex .cbmark { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+    .cb .cbex.good .cbmark { color: #3d6b4a; }
+    .cb .cbex.bad .cbmark { color: var(--terracotta); }
+    .cb .cbex p { font-size: 14px; color: var(--ink); line-height: 1.6; margin: 0; }
+    .cb .cbex.bad p { color: var(--ink-mid); }
+
+    /* SOCIAL */
+    .platforms { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 32px; margin-bottom: 48px; }
+    .plat { background: #fff; border-radius: 14px; padding: 24px; text-align: center; box-shadow: var(--shadow-sm); }
+    .plat .plnum { font-family: var(--font-display); font-size: 14px; color: var(--orange); font-weight: 700; margin-bottom: 10px; }
+    .plat h4 { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+    .plat p { font-size: 12px; color: var(--ink-mid); line-height: 1.4; margin: 0 0 10px; }
+    .plat .plmeta { font-size: 11px; color: var(--ink-light); padding-top: 10px; border-top: 1px solid var(--cream); margin-top: 10px; }
+
+    .pillars6 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 48px; }
+    .p6 { background: var(--cream); border-radius: 14px; padding: 24px; border-top: 4px solid var(--gold); }
+    .p6:nth-child(2) { border-color: var(--orange); }
+    .p6:nth-child(3) { border-color: var(--sage); }
+    .p6:nth-child(4) { border-color: var(--teal); }
+    .p6:nth-child(5) { border-color: var(--terracotta); }
+    .p6 .p6n { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.1em; color: var(--orange); margin-bottom: 8px; }
+    .p6 h4 { font-size: 14px; color: var(--ink); margin-bottom: 8px; font-weight: 600; }
+    .p6 p { font-size: 12px; color: var(--ink-mid); line-height: 1.5; margin: 0; }
+
+    .poststruct { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 32px; margin-bottom: 40px; }
+    .ps { background: #fff; border-radius: 14px; padding: 24px; text-align: center; box-shadow: var(--shadow-sm); }
+    .ps h4 { font-size: 13px; font-weight: 700; color: var(--orange); margin-bottom: 8px; letter-spacing: 0.08em; }
+    .ps p { font-size: 12px; color: var(--ink-mid); margin: 0; line-height: 1.5; }
+
+    .cal { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); }
+    .cal .calrow { display: grid; grid-template-columns: 140px 220px 1fr; gap: 20px; padding: 18px 28px; border-bottom: 1px solid var(--cream); align-items: center; }
+    .cal .calrow:last-child { border-bottom: none; }
+    .cal .calrow .cday { font-weight: 700; color: var(--orange); font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; }
+    .cal .calrow .ctype { font-weight: 600; color: var(--ink); font-size: 14px; }
+    .cal .calrow .cdesc { font-size: 13px; color: var(--ink-mid); }
+
+    /* CHECKLIST */
+    .checklist { display: grid; gap: 12px; margin-top: 32px; margin-bottom: 40px; }
+    .cl { background: #fff; border-radius: 14px; padding: 22px 28px; box-shadow: var(--shadow-sm); display: grid; grid-template-columns: 140px 1fr; gap: 24px; align-items: center; border-left: 4px solid var(--gold); }
+    .cl .clk { font-weight: 700; color: var(--orange); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .cl .clq { font-size: 14px; color: var(--ink); line-height: 1.55; }
+    .clrule { background: var(--gold); color: var(--ink); border-radius: 14px; padding: 24px 32px; font-weight: 600; text-align: center; font-size: 16px; margin-top: 20px; margin-bottom: 40px; }
+
+    .questionlist { background: var(--cream); border-radius: 16px; padding: 32px 40px; }
+    .questionlist h4 { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
+    .questionlist ul { list-style: none; }
+    .questionlist ul li { padding: 10px 0 10px 28px; font-size: 14px; color: var(--ink-mid); border-bottom: 1px solid var(--sand); position: relative; line-height: 1.5; }
+    .questionlist ul li:last-child { border-bottom: none; }
+    .questionlist ul li::before { content: '?'; position: absolute; left: 0; top: 10px; width: 20px; height: 20px; border-radius: 50%; background: var(--orange); color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+    @media (max-width: 900px) {
+      nav.topnav { padding: 0 20px; gap: 16px; }
+      section, .band { padding: 56px 24px; }
+      .grid2, .logo-row, .werte-grid, .farb-grid, .farb-grid-3, .principles, .anw-grid, .gest-grid, .voice-grid, .rules-grid, .foto-grid, .kurs-icon-grid, .foto-gallery, .wearenot, .founder-grid, .kernwerte, .neverlist, .msgpillars, .zgrid, .expansion, .termgrid, .pillars6, .platforms, .poststruct { grid-template-columns: 1fr; }
+      .tc, .cl { grid-template-columns: 1fr; gap: 12px; }
+      .tr { grid-template-columns: 1fr; gap: 6px; }
+      .typo-row { grid-template-columns: 1fr; gap: 12px; }
+      .pillars { grid-template-columns: 1fr 1fr; }
+      .th1 { font-size: 36px; }
+      .th2 { font-size: 28px; }
+      .farb-grid { grid-template-columns: repeat(3,1fr); }
+      .kurs-icon-grid { grid-template-columns: repeat(2,1fr); }
+      .foto-gallery { grid-template-columns: repeat(2,1fr); }
+    }
+</style>
+</head>
+<body data-cc-id="cc-1" style="cursor: crosshair;">
+
+<nav class="topnav">
+  <span class="nav-logo">DSGS</span>
+  <a href="#ueber">Über</a>
+  <a href="#werte">Werte</a>
+  <a href="#logo">Logo</a>
+  <a href="#farben">Farben</a>
+  <a href="#typografie">Typografie</a>
+  <a href="#icons">Bildwelt</a>
+  <a href="#voice">Tonalität</a>
+  <a href="#gestaltung">Gestaltung</a>
+  <a href="#anwendung">Anwendung</a>
+</nav>
+
+<!-- COVER -->
+<div class="cover">
+  <img src="assets/logo-white-pos-1.png" alt="DSGS Logo" class="cover-logo" style="filter: invert(1) brightness(2);">
+  <h1>DO SOMETHING<br>GREAT SOCIETY</h1>
+  <p class="cover-tagline">Unsere Stimme. Unsere Werte. Unsere Sprache.</p>
+  <p class="cover-meta">Brandbook 2026 · Version 2.0 · März 2026</p>
+  <p class="cover-meta" style="margin-top:8px; opacity:0.55">dosomethinggreat.work · Kalvarienberggasse 12, 1170 Wien</p>
+</div>
+
+<hr class="div">
+
+<!-- 01 WER WIR SIND -->
+<section id="ueber">
+  <div class="label">01 — Wer wir sind</div>
+  <h2>Über DSGS</h2>
+  <div class="grid2">
+    <div>
+      <p class="intro" style="margin-bottom:24px">Die DO SOMETHING GREAT SOCIETY ist eine Co-Working-Tischlerei im 17. Bezirk Wien — gegründet 2022 von Jan Hosa und Philipp Consemüller.</p>
+      <p>800 m² Fläche. Profi-Werkzeug. Holzlager. Küche. Und eine saugute Kaffeemaschine.</p>
+      <p>Wir sind Enthusiast:innen für echtes Handwerk und Materialkunde — eine Werkstatt-Community, kein Studio und kein Space.</p>
+    </div>
+    <div>
+      <p class="pull-quote">„Irgendwann wollten wir nicht mehr nur am Computer sitzen und Daten produzieren. Wir wollten wieder etwas zum Angreifen herstellen — etwas zum Ansehen, Berühren und Genießen. Etwas bauen, das bleibt. Und wir wollten das gemeinsam machen."</p>
+      <p style="margin-top:16px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-light)">Jan Hosa · Mitgründer DSGS</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:64px; margin-bottom:8px">We are / We are not</h3>
+  <div class="wearenot">
+    <div class="wan y"><h4>✓ We are</h4>
+      <ul>
+        <li>Enthusiast:innen für echtes Handwerk und Materialkunde</li>
+        <li>Direkt, ehrlich, mit feinem Humor und Selbstironie</li>
+        <li>Eine Werkstatt-Community — nicht ein Studio oder Space</li>
+        <li>Für alle: alle Altersgruppen, alle Geschlechter (&gt;50% Frauen!)</li>
+        <li>Lösungs-orientiert und positiv — nicht systemkritisch-predigend</li>
+        <li>Modern und progressiv — nicht „früher war alles besser"</li>
+      </ul>
+    </div>
+    <div class="wan n"><h4>✗ We are not</h4>
+      <ul>
+        <li>Corporate-glatt oder Lifestyle-Influencer-Sprech</li>
+        <li>Digital-Detox-Evangelisten — wir nutzen Digital strategisch</li>
+        <li>Elitär oder gatekeeping — „Jeder kann tischlern!"</li>
+        <li>Sentimental, kitschig oder pseudo-philosophisch</li>
+        <li>Bullshit-Bingo oder Buzzword-Salat</li>
+        <li>Eine Escape-Fantasy — Handwerk ist echte Alternative</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="margin-top:56px; margin-bottom:8px">Die Marke in drei Sätzen</h3>
+  <div class="dreisaetze">
+    <p>Wir sind Enthusiast:innen für echtes Handwerk und echte Zusammenarbeit.</p>
+    <p>Wir sprechen direkt, konkret, mit feiner Selbst-Ironie — nie mit Corporate-Bullshit.</p>
+    <p>Alles, was wir sagen, muss einen Sinn haben und ein Problem lösen — oder wir sagen es nicht.</p>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- 02 FOUNDERS -->
+<div class="band band-gold" id="founders" data-cc-id="cc-3">
+  <div class="band-inner">
+    <div class="label">02 — Brand Personality</div>
+    <h2>Jan &amp; Philipp</h2>
+    <p class="intro">DSGS ist keine anonyme Marke. Die Gründer sind das Gesicht — und das ist Stärke, keine Schwäche.</p>
+    <div class="founder-grid">
+      <div class="founder">
+        <div class="fname">Jan Hosa</div>
+        <div class="frole">Geschäftsführer · Visionär · Marken-Pilot · Operativer Mastermind</div>
+        <p>Kreativdirektor, Regisseur und Ideen-Spinner seit 30 Jahren — Bastler seit 50 Jahren. War Director der Inhouse-Agentur bei ProSiebenSat.1 Puls 4, hat Format-Marken wie „2 Minuten, 2 Millionen" verantwortet.</p>
+        <p>Hat jeden einzelnen DSGS-Kurs entwickelt und selbst gehalten, alle Möbel konzipiert und designed. Er ist in jedem operativen Bereich involviert.</p>
+        <div class="founder-meta">
+          <div><h5>Repräsentiert</h5><ul><li>Den WARUM-Teil</li><li>Sinn · Zweck · Veränderung</li><li>Marke · Strategie</li></ul></div>
+          <div><h5>Spricht</h5><ul><li>Enthusiastisch</li><li>Mit Bildern &amp; Leidenschaft</li><li>Visionär, aber konkret</li></ul></div>
+        </div>
+      </div>
+      <div class="founder">
+        <div class="fname">Philipp Consemüller</div>
+        <div class="frole">Herr der Werkstatt · Werkzeug-Fanatiker · Raumgestalter · Eventspezialist</div>
+        <p>Räumebauer seit 25 Jahren, Werkzeug-Nerd seit 45 Jahren. Hat die Werkstatt in der Kalvarienberggasse 2019 übernommen — mit erheblichen Investitionen und echter Leidenschaft. Mitbegründer der Digitalkonferenz 4Gamechangers.</p>
+        <p>Straight forward, hands-on, zu jeder Tages- und Nachtzeit da. Die Werkstatt ist sein Haus — und die Basis von allem.</p>
+        <div class="founder-meta">
+          <div><h5>Repräsentiert</h5><ul><li>Den WIE-Teil</li><li>Raum · Material · Werkzeuge</li><li>Kompetenz · Events</li></ul></div>
+          <div><h5>Spricht</h5><ul><li>Konkret &amp; handwerklich klar</li><li>Mit Fachwissen</li><li>Verlässlich, präzise</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wendepunkt">
+      <div class="wlbl">Hamburg, 2022 — Der Wendepunkt</div>
+      <h3>Covid-Zeit. Beide um die 50.</h3>
+      <p>Jan, der emotionale Kreative machte eine Präsentation und entwickelte eine Strategie für eine&nbsp;
+Co-Working-Tischlerei. Philipp, Realist und Anpacker dachte zunächst über die herausfordernden Fragen nach. Für Antworten reisten beide zu einem Tischlerkurs nach Hamburg.
+
+</p>
+      <blockquote>„Am zweiten Tag des Kurses — wenn nicht schon am ersten — haben wir beide gleichzeitig festgestellt: Das machen wir in Wien auch."</blockquote>
+      <cite data-cc-id="cc-2" style="">Jan + PHILIPP</cite>
+    </div>
+  </div>
+</div>
+
+<!-- 03 KERNWERTE -->
+<div class="band band-dark" id="werte">
+  <div class="band-inner">
+    <div class="label">03 — Unsere Kernwerte</div>
+    <h2>Sechs Werte</h2>
+    <p class="intro">Keine Marketing-Erfindungen — sie entstammen der Gründungsgeschichte und leben in jedem Werkstück, jedem Kurs, jedem Teambuilding-Tag.</p>
+    <div class="kernwerte">
+      <div class="kw"><h3>Sinn</h3><p>Alles muss einen Sinn haben — echte Bedeutung, nicht Effizienz oder Marketing.</p><p class="context">Kids: „echtes Handwerk statt Plastik" · Hobby: „etwas Bleibendes schaffen" · Corporate: „echte Teamarbeit + Caritas-Spende" · Abo: „Ideen verwirklichen, Community"</p></div>
+      <div class="kw"><h3>Handwerk</h3><p>Qualität, Knotenarbeit, Anspruch ans Material und an sich selbst.</p><p class="context">Nicht DIY-Basteln — echtes, ernsthaftes Tischlerhandwerk.</p></div>
+      <div class="kw"><h3>Zusammensein</h3><p>Nicht isoliert, nicht Online-Simulation. Echte Menschen nebeneinander, miteinander.</p><p class="context">Die Werkstatt als sozialer Raum — nicht nur für Holz, sondern für Menschen.</p></div>
+      <div class="kw"><h3>Ermutigung</h3><p>Wir glauben an Menschen. Wir sagen nicht „das ist zu schwer", sondern „wir zeigen dir, wie".</p><p class="context">Kein Gatekeeping. Kein Elitismus. Jeder kann tischlern.</p></div>
+      <div class="kw"><h3>Ehrlichkeit</h3><p>Keine Sales-Bullshit. „Ja, wir sind nerdig." Das ist ehrlich.</p><p class="context">Selbstironie ist erlaubt und gewünscht — aber nie auf Kosten der Community.</p></div>
+      <div class="kw"><h3>Stolz</h3><p>Auf das, was man macht und schafft. Nicht bescheiden, aber nicht arrogant.</p><p class="context">Das Staunen über sich selbst ist unser stärkstes emotionales Produkt.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- 04 WAS WIR NIE SAGEN -->
+<section id="nicht">
+  <div class="label">04 — Was wir nie sagen</div>
+  <h2>Sprach-Tabu</h2>
+  <p class="intro">Diese Wörter und Phrasen widersprechen der DSGS-Brand. Sie gehören nicht in unsere Kommunikation.</p>
+  <div class="neverlist">
+    <div class="nv"><div class="nterm">Escape</div><div class="nreason">Werkstatt ist nicht Flucht, sondern echte Alternative</div></div>
+    <div class="nv"><div class="nterm">Influencer / Viral / Trend</div><div class="nreason">DSGS ist nachhaltig, nicht trend-abhängig</div></div>
+    <div class="nv"><div class="nterm">Abenteuer / Adrenalin-Kick</div><div class="nreason">Falscher Ton — wir sind keine Action-Sport-Marke</div></div>
+    <div class="nv"><div class="nterm">Authentisch / Real (über uns selbst)</div><div class="nreason">Man sagt nicht von sich, dass man authentisch ist</div></div>
+    <div class="nv"><div class="nterm">Nachhaltigkeit (als Buzzword)</div><div class="nreason">Sag konkret: „Aufmöbeln statt wegwerfen"</div></div>
+    <div class="nv"><div class="nterm">Empowerment</div><div class="nreason">Zeig es statt es zu sagen: „Jeder kann tischlern"</div></div>
+    <div class="nv"><div class="nterm">Diversität / Inklusion (abstrakt)</div><div class="nreason">Konkret: „Für alle", „verschiedene Vorkenntnisse"</div></div>
+    <div class="nv"><div class="nterm">Premium / Luxury</div><div class="nreason">Nicht elitär. Stattdessen: „Qualität", „gut gemacht"</div></div>
+    <div class="nv"><div class="nterm">Digital Detox</div><div class="nreason">Zu pauschal. Besser: „Raus vom Bildschirm", spezifisch</div></div>
+    <div class="nv"><div class="nterm">Früher war alles besser</div><div class="nreason">Wir sind modern. Wir ermöglichen Erschaffen &amp; Stolz</div></div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- 05 MESSAGING -->
+<div class="band band-cream" id="messaging">
+  <div class="band-inner">
+    <div class="label">05 — Messaging</div>
+    <h2>Was wir anbieten</h2>
+    <p class="intro">Vier Zielgruppen, vier Kern-Botschaften. Plus zwei neue strategische Dimensionen.</p>
+
+    <h3 style="margin-bottom:12px">Die 4 Message-Säulen</h3>
+    <div class="msgpillars">
+      <div class="mp"><div class="mph">Handwerk &gt; Digital</div><div class="mpq">„Irgendwann wollten wir nicht mehr nur am Computer sitzen und Daten produzieren"</div><p class="mps">Machen lassen war gestern. Hier könnt ihr euch noch selbst die Hände schmutzig machen.</p></div>
+      <div class="mp"><div class="mph">Sinn &gt; Simulation</div><div class="mpq">„Teambuilding mit Sinn"</div><p class="mps">Raus aus Büro und Home-Office. Etwas, das bleibt und uns erfreut.</p></div>
+      <div class="mp"><div class="mph">Zusammen &gt; Isolation</div><div class="mpq">„Gemeinsam anpacken, erleben &amp; etwas Sinnvolles schaffen"</div><p class="mps">Es gibt keine schöneren Momente, als zusammen etwas zu schaffen.</p></div>
+      <div class="mp"><div class="mph">Können &gt; Müssen</div><div class="mpq">„Jeder kann Tischlern — das meinen wir nicht nur so, das beweisen wir euch"</div><p class="mps">Ihr habt den Willen — wir haben den Rest.</p></div>
+    </div>
+
+    <h3 style="margin-bottom:12px">Zielgruppen-Botschaften</h3>
+    <div class="zgrid">
+      <div class="zg"><h4>Hobby-Tischler:innen &amp; Kreative</h4><div class="zhead">Raus aus der Digital-Falle, rein ins echte Machen</div><p>800 m², Profi-Werkzeuge, Material, Kaffee — mitten in Wien. Ihr habt den Willen, wir haben den Rest.</p></div>
+      <div class="zg"><h4>Kurs-Teilnehmer:innen</h4><div class="zhead">Jeder kann Tischlern — wir beweisen es dir</div><p>Von 2-Stunden-Schnuppern bis 5-Wochen-Basiskurs. Kleine Gruppen, echte Werkstücke am Ende.</p></div>
+      <div class="zg"><h4>Unternehmen &amp; Teams</h4><div class="zhead">Teambuilding mit Sinn. Mit echtem Ergebnis. Mit dem Geruch von Holz.</div><p>Neue Möbel fürs Office ODER Spende an Caritas — das Team entscheidet. 15+ Referenzkunden.</p></div>
+      <div class="zg"><h4>Individueller Möbelbau</h4><div class="zhead">Wir entwerfen und bauen moderne, coole Möbel — genau wie du sie dir vorstellst</div><p>Nicht IKEA-Standard. Mit Handschrift, mit Liebe zum Detail. Restaurierung, Upcycling.</p></div>
+    </div>
+
+    <div class="expansion">
+      <div class="exp"><div class="elbl">Strategische Dimension I</div><h4>DO SOMETHING LIVE</h4><p>Konzertserie: Musik ist Handwerk. Die Werkstatt ist die Bühne. DSGS als Kulturraum — Konzerte zwischen Sägespänen und Hobelbank. Kein Konzertsaal im klassischen Sinn: die Werkstatt IST die Bühne.</p></div>
+      <div class="exp"><div class="elbl">Strategische Dimension II</div><h4>Expansion &amp; Franchise-Vision</h4><p>Zukunft: DSGS in andere Städte bringen — mehr Menschen erreichen, Tischlereien vor Schließung bewahren, Wissen weitergeben. Eines von mehreren Zukunftsmodellen. Gibt DSGS eine Relevanz weit über Wien hinaus.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- 06 TONE-BY-CONTEXT -->
+<section id="tone">
+  <div class="label">06 — Tone-by-Context</div>
+  <h2>Wie wir wo sprechen</h2>
+  <p class="intro">Gleicher Markenkern — unterschiedlicher Auftritt. So sprechen wir je nach Kanal und Situation.</p>
+  <div class="tone-ctx">
+    <div class="tc">
+      <div class="tchead"><h4>Website &amp; Homepage</h4><p>Enthusiastisch, ermutigend, mit feinem Selbst-Humor</p></div>
+      <div class="tcbody">
+        <div class="tcrow"><span class="tck">Headline-Energie</span><span class="tcv">Hoch, direkt, mit Frage oder Imperativ</span></div>
+        <div class="tcrow"><span class="tck">Erklär-Register</span><span class="tcv">Einfach, Metaphern statt Abstraktion</span></div>
+        <div class="tcrow"><span class="tck">Humor-Grad</span><span class="tcv">Leicht, selbstironisch</span></div>
+        <div class="tcrow"><span class="tck">Rhythmus</span><span class="tcv">Kurz, prägnant, mit Pausen</span></div>
+      </div>
+    </div>
+    <div class="tc">
+      <div class="tchead"><h4>B2B / Teambuilding</h4><p>Professionell, aber nicht corporate-stiff. Werte-zentriert, Resultat-fokussiert</p></div>
+      <div class="tcbody">
+        <div class="tcrow"><span class="tck">Eröffnung</span><span class="tcv">Pain-Punkte benennen: „Raus aus Büro und Home-Office"</span></div>
+        <div class="tcrow"><span class="tck">Wertesprache</span><span class="tcv">„Sinn", „echte Co-Creation" — nicht kitschig, sondern businesslike</span></div>
+        <div class="tcrow"><span class="tck">Resultat</span><span class="tcv">Konkret: „Neue Möbel ODER Spende — eure Entscheidung"</span></div>
+        <div class="tcrow"><span class="tck">Social-Proof</span><span class="tcv">15+ Unternehmen: 4Gamechangers, APG, WU Wien, ÖAMTC…</span></div>
+      </div>
+    </div>
+    <div class="tc">
+      <div class="tchead"><h4>Kurs-Beschreibungen</h4><p>Konkret, ermutigend, mit klarem praktischen Nutzen</p></div>
+      <div class="tcbody">
+        <div class="tcrow"><span class="tck">Anfänger:innen</span><span class="tcv">Keine Einwände — direkte Handreichung</span></div>
+        <div class="tcrow"><span class="tck">Nutzen</span><span class="tcv">Was machst du konkret, was hast du am Ende</span></div>
+        <div class="tcrow"><span class="tck">Gruppen-Feeling</span><span class="tcv">Nicht isoliert — gemeinsame Experience</span></div>
+        <div class="tcrow"><span class="tck">Age-Inclusivity</span><span class="tcv">Keine Altersgrenze-Betitelung, sondern Kontext</span></div>
+      </div>
+    </div>
+    <div class="tc">
+      <div class="tchead"><h4>Email &amp; Newsletter</h4><p>Persönlich, relevant, nicht spammig</p></div>
+      <div class="tcbody">
+        <div class="tcrow"><span class="tck">Anrede</span><span class="tcv">Du-Form — immer</span></div>
+        <div class="tcrow"><span class="tck">Betreff</span><span class="tcv">Keine Clickbait — ehrlich: „Neue Kurse ab April"</span></div>
+        <div class="tcrow"><span class="tck">Inhalt</span><span class="tcv">30% Info, 60% Story/Inspiration, 10% CTA</span></div>
+        <div class="tcrow"><span class="tck">Sign-Off</span><span class="tcv">Mit Namen: „Alles Gute, Jan" — nie „DSGS-Team"</span></div>
+      </div>
+    </div>
+    <div class="tc">
+      <div class="tchead"><h4>Community (Werkstatt-Abo)</h4><p>Informal, gegenseitiges Vertrauen, Werkstatt-Humor</p></div>
+      <div class="tcbody">
+        <div class="tcrow"><span class="tck">Regeln</span><span class="tcv">„Werkstattfibel" statt „Hausordnung"</span></div>
+        <div class="tcrow"><span class="tck">Lob</span><span class="tcv">Öffentlich, mit Namen</span></div>
+        <div class="tcrow"><span class="tck">Konflikt</span><span class="tcv">Direkt, respektvoll, nicht öffentlich-beschämend</span></div>
+        <div class="tcrow"><span class="tck">Events</span><span class="tcv">FOMO-frei, aber mit echtem Reiz</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- 07 TERMINOLOGIE -->
+<div class="band band-sand" id="terminologie">
+  <div class="band-inner">
+    <div class="label">07 — Terminologie</div>
+    <h2>Verbindliches Vokabular</h2>
+    <p class="intro">Bestimmte Wörter machen DSGS aus — andere schwächen die Marke. Diese Liste ist verbindlich.</p>
+
+    <div class="termblock">
+      <div class="termhead"><h3>Must-Use</h3><span class="tchip must">Diese Wörter müssen vorkommen</span></div>
+      <div class="termgrid">
+        <div class="tr"><div class="tword">Sinn</div><div class="tnote">Zentrale Wert-Aussage. Nicht nur „macht Spaß", sondern hat Bedeutung.<em>„Teambuilding mit Sinn"</em></div></div>
+        <div class="tr"><div class="tword">Handfest</div><div class="tnote">Kernpositionierung gegen Abstraktion/Digital.<em>„Und ganz sicher kommt etwas Handfestes dabei heraus"</em></div></div>
+        <div class="tr"><div class="tword">Zusammen / Gemeinsam</div><div class="tnote">Gemeinschafts-Kern.<em>„Zusammen anpacken", „gemeinsam bauen"</em></div></div>
+        <div class="tr"><div class="tword">Werkstatt</div><div class="tnote">Ort der Identität — nicht Studio oder Space.<em>„Werkstatt-Abo", „unsere Werkstatt"</em></div></div>
+        <div class="tr"><div class="tword">Werkstücke</div><div class="tnote">Nicht Output oder Ergebnis — handwerklicher, stolzer.<em>„Die Werkstücke können an Caritas gehen"</em></div></div>
+        <div class="tr"><div class="tword">Erschaffen</div><div class="tnote">Positive, kreative Kraft.<em>„Großartige Dinge erschaffen"</em></div></div>
+        <div class="tr"><div class="tword">Machen / Handwerken</div><div class="tnote">Action-Wort, nicht akademisch.<em>„Raus ins echte Machen"</em></div></div>
+      </div>
+    </div>
+
+    <div class="termblock">
+      <div class="termhead"><h3>Prefer</h3><span class="tchip pref">Bessere Alternative wenn möglich</span></div>
+      <div class="termgrid">
+        <div class="tr"><div class="tword">Co-Working-Tischlerei</div><div class="tnote">statt Makerspace, Craft-Studio</div></div>
+        <div class="tr"><div class="tword">Schnuppern</div><div class="tnote">statt Trial, Taster Session</div></div>
+        <div class="tr"><div class="tword">Hobbytischler:innen</div><div class="tnote">statt DIY-Enthusiasts</div></div>
+        <div class="tr"><div class="tword">Restaurieren</div><div class="tnote">statt Upcyclen, Repurpose</div></div>
+        <div class="tr"><div class="tword">Kleine Gruppen</div><div class="tnote">statt Cohorts, Pods</div></div>
+        <div class="tr"><div class="tword">Holz</div><div class="tnote">statt Wood, Material</div></div>
+        <div class="tr"><div class="tword">Begleitet von erfahrenen Tischler:innen</div><div class="tnote">statt Mentored by professional instructors</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 08 SPRACHMUSTER -->
+<section id="muster">
+  <div class="label">08 — Sprachmuster, die wirken</div>
+  <h2>Strukturen mit DSGS-Energie</h2>
+  <p class="intro">Diese Strukturen erzeugen die typische DSGS-Energie. Immer wieder einsetzen.</p>
+  <div class="patterns">
+    <div class="pat">
+      <h4>Negation → Affirmation</h4>
+      <p class="pdesc">Nagt an Standard, zeigt dann die DSGS-Alternative. Sofort Lösung.</p>
+      <div class="pex">„Nicht nur am Computer sitzen" → „Handwerk bei uns"</div>
+      <div class="pex">„Machen lassen war gestern" → „Selbst die Hände schmutzig machen"</div>
+      <div class="pex">„Jeder kann Tischlern! Das meinen wir nicht nur so — das beweisen wir euch"</div>
+    </div>
+    <div class="pat">
+      <h4>Konkretes Bild statt Abstraktion</h4>
+      <p class="pdesc">Menschen sehen, riechen, fühlen das. Nicht nur ein Konzept — eine Sensation.</p>
+      <div class="pex">„Geruch von Holz, Öl und Faszination"</div>
+      <div class="pex">„Hände schmutzig machen"</div>
+      <div class="pex">„Dem Kühlschrank geht das Bier aus"</div>
+      <div class="pex">„Eiche, 5 cm stark, selbst gehobelt"</div>
+    </div>
+    <div class="pat">
+      <h4>Skepsis ansprechen → widerlegen</h4>
+      <p class="pdesc">Nimmt den Einwand, macht ihn absurd, zerlegt ihn.</p>
+      <div class="pex">„Keine eigene Werkstatt? Dann nimm dir eine — mit Abo"</div>
+      <div class="pex">„Anfänger:innen Kurse? Braucht grundsätzlich keiner Vorkenntnisse. Dafür sind wir ja da"</div>
+    </div>
+    <div class="pat">
+      <h4>Stolz + Demut gleichzeitig</h4>
+      <p class="pdesc">Selbstbewusstsein ohne Hochmut. Einladend, nicht exklusiv.</p>
+      <div class="pex">„Ja, wir sind ein bisschen nerdig, wenn es um Werkzeug geht"</div>
+      <div class="pex">„Wir hassen Hausordnung. Daher: Kleine Werkstattfibel"</div>
+    </div>
+    <div class="pat">
+      <h4>Aktion statt Versprechen</h4>
+      <p class="pdesc">Konkret, Vertrauensaufbau, nicht vage.</p>
+      <div class="pex">„Wir zeigen vor"</div>
+      <div class="pex">„Wir helfen, zeigen vor und denken mit"</div>
+      <div class="pex">„Was nicht da ist und wir aber wollen, besorgen wir"</div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- 09 ANTI-PATTERNS -->
+<div class="band band-cream" id="anti">
+  <div class="band-inner">
+    <div class="label">09 — Anti-Patterns</div>
+    <h2>Was sich nicht nach DSGS anhört</h2>
+    <p class="intro">Zehn Muster, die sich NICHT wie DSGS anhören. Wer diese erkennt, versteht die Marke.</p>
+    <div class="apgrid">
+      <div class="ap"><div class="apnum">01</div><h4>Corporate-Sprech</h4>
+        <div class="apline bad"><span class="apmark">✗</span>„Wir freuen uns, Ihnen eine umfassende Lösung für Ihre Teamentwicklung anzubieten"</div>
+        <div class="apline good"><span class="apmark">✓</span>„Raus aus Büro und Home-Office. Eure Teams brauchen echte Zusammenarbeit"</div>
+      </div>
+      <div class="ap"><div class="apnum">02</div><h4>Überverkauf</h4>
+        <div class="apline bad"><span class="apmark">✗</span>„Revolutionäres Teambuilding-Erlebnis, das Ihr Leben verändern wird!"</div>
+        <div class="apline good"><span class="apmark">✓</span>„Neue Möbel fürs Office ODER Spende — eure Entscheidung"</div>
+      </div>
+      <div class="ap"><div class="apnum">03</div><h4>Buzzword-Salat</h4>
+        <div class="apline bad"><span class="apmark">✗</span>„Transformative Co-Learning-Experience mit Impact-Maximization"</div>
+        <div class="apline good"><span class="apmark">✓</span>„In kleinen Gruppen lernst du die Basics und setzt dein eigenes Werkstück um"</div>
+      </div>
+      <div class="ap"><div class="apnum">04</div><h4>Künstliches Denglisch</h4>
+        <div class="apline bad"><span class="apmark">✗</span>„Dein Custom-Furniture-Journey beginnt hier"</div>
+        <div class="apline good"><span class="apmark">✓</span>„Deine eigenen Möbelideen — wir realisieren sie mit dir"</div>
+      </div>
+      <div class="ap"><div class="apnum">05</div><h4>Systemkritik ohne Lösung</h4>
+        <div class="apline bad"><span class="apmark">✗</span>„Die Welt ist schrecklich, Menschen sind entfremdet"</div>
+        <div class="apline good"><span class="apmark">✓</span>„Irgendwann wollten wir nicht mehr nur am Computer sitzen"</div>
+      </div>
+      <div class="ap"><div class="apnum">06</div><h4>Falsche Intimität</h4>
+        <div class="apline bad"><span class="apmark">✗</span>„Wir sind wie eine Familie, und du bist Teil davon"</div>
+        <div class="apline good"><span class="apmark">✓</span>„Ein Haufen passionierter Menschen, die gerne große Dinge erschaffen"</div>
+      </div>
+      <div class="ap"><div class="apnum">07</div><h4>Passive Voice</h4>
+        <div class="apline bad"><span class="apmark">✗</span>„Es wird beobachtet, dass Teams von Hands-On-Aktivitäten profitieren"</div>
+        <div class="apline good"><span class="apmark">✓</span>„Teams, die zusammen bauen, arbeiten danach besser zusammen"</div>
+      </div>
+      <div class="ap"><div class="apnum">08</div><h4>Vage Superlative</h4>
+        <div class="apline bad"><span class="apmark">✗</span>„Beste Tischlerei in Wien!"</div>
+        <div class="apline good"><span class="apmark">✓</span>„800 m², Holzlager, Profi-Werkzeuge — die größte Film-Werkstatt der Stadt"</div>
+      </div>
+      <div class="ap"><div class="apnum">09</div><h4>Apologetischer Ton</h4>
+        <div class="apline bad"><span class="apmark">✗</span>„Wir entschuldigen uns, wenn die Werkstatt manchmal voll ist"</div>
+        <div class="apline good"><span class="apmark">✓</span>„Die Werkstatt ist beliebt — für einen festen Platz: Abo"</div>
+      </div>
+      <div class="ap"><div class="apnum">10</div><h4>Unnötiges Siezen</h4>
+        <div class="apline bad"><span class="apmark">✗</span>„Sehr geehrte Damen und Herren, wir freuen uns, Ihnen…"</div>
+        <div class="apline good"><span class="apmark">✓</span>„Hi, schön, dass ihr euch meldet! Erzählt uns von eurem Team."</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 10 CONTENT-BEISPIELE -->
+<section id="beispiele">
+  <div class="label">10 — Content-Beispiele</div>
+  <h2>Gut &amp; Falsch</h2>
+  <p class="intro">Konkrete Vorbilder für die häufigsten Kommunikations-Situationen.</p>
+  <div class="cbgrid">
+    <div class="cb">
+      <div class="cblbl">Situation</div>
+      <h4>Website Headline</h4>
+      <div class="cbex good"><div class="cbmark">✓ So klingt DSGS</div><p>Co-Working-Werkstatt, Tischlerkurse &amp; Teambuilding mit Sinn — für alle, die lieber handwerken, als nur am Computer zu sitzen.</p></div>
+      <div class="cbex bad"><div class="cbmark">✗ So klingt DSGS nicht</div><p>Transformative Handwerk-Erlebnisse für innovative Teams — Ihr Gateway zu authentischer Co-Creation.</p></div>
+    </div>
+    <div class="cb">
+      <div class="cblbl">Situation</div>
+      <h4>Kurs-Beschreibung (Basiskurs)</h4>
+      <div class="cbex good"><div class="cbmark">✓ So klingt DSGS</div><p>Unser umfassender Einstiegskurs. Schritt für Schritt zu deinen ersten eigenen Werkstücken. In kleinen Gruppen lernst du die Basics des Tischlerhandwerks — begleitet von erfahrenen Tischler:innen. Jeder kann Tischlern. Das meinen wir nicht nur so — das beweisen wir euch.</p></div>
+      <div class="cbex bad"><div class="cbmark">✗ So klingt DSGS nicht</div><p>Unlock your creative potential with our transformative woodworking journey! Discover your inner maker! This is more than a course — it's a life-changing experience!</p></div>
+    </div>
+    <div class="cb">
+      <div class="cblbl">Situation</div>
+      <h4>Teambuilding B2B</h4>
+      <div class="cbex good"><div class="cbmark">✓ So klingt DSGS</div><p>Teambuilding mit Sinn. Und dem Geruch von Holz, Öl und Faszination. Raus aus Büro und Home-Office. Bei unseren Hands-On-Workshops arbeitet ihr gemeinsam an echten Holzprojekten. Am Ende habt ihr etwas zu sehen: neue Möbel fürs Office. Oder eine Spende an Caritas. Eure Entscheidung.</p></div>
+      <div class="cbex bad"><div class="cbmark">✗ So klingt DSGS nicht</div><p>Elevate Your Team Performance with Premium Experiential Engagement. Our bespoke workshops leverage artisanal methodologies to drive organizational alignment.</p></div>
+    </div>
+    <div class="cb">
+      <div class="cblbl">Situation</div>
+      <h4>Social Media Post</h4>
+      <div class="cbex good"><div class="cbmark">✓ So klingt DSGS</div><p>[Foto: Hände an Holz] Es gibt keine schöneren Momente, als zusammen etwas zu schaffen. Diese Woche: Schneidbrett-Workshop. Ein Wochenende, ein Brett — und ein stolzes Werkstück in den Händen. Plätze frei. Link in Bio.</p></div>
+      <div class="cbex bad"><div class="cbmark">✗ So klingt DSGS nicht</div><p>🔥 TRANSFORM YOUR CREATIVE POTENTIAL 🔥 Join our revolutionary woodworking experience! LIMITED SPOTS! Don't miss out!</p></div>
+    </div>
+    <div class="cb">
+      <div class="cblbl">Situation</div>
+      <h4>Email Newsletter</h4>
+      <div class="cbex good"><div class="cbmark">✓ So klingt DSGS</div><p>Liebe Anna, kommende Woche starten die 5-Wochen-Basiskurse. Noch 3 Plätze frei. Letzte Woche hat eine 65-Jährige angefangen, die noch nie eine Säge in der Hand hatte. Nach einer Stunde sagte sie: „Ich wusste nicht, dass das SO Spaß machen kann." Jetzt baut sie einen Nachttisch — und ist stolz wie Oskar. Alles Gute, Jan</p></div>
+      <div class="cbex bad"><div class="cbmark">✗ So klingt DSGS nicht</div><p>Subject: 🎉 EXCLUSIVE OPPORTUNITY: Transform Your Life This Spring! Dear Valued Community Member, We are delighted to announce our revolutionary Spring Initiative!</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- 11 SOCIAL MEDIA -->
+<div class="band band-dark" id="social">
+  <div class="band-inner">
+    <div class="label">11 — Social Media &amp; Content-Strategie</div>
+    <h2>Plattform-Logik</h2>
+    <p class="intro">Gleicher Markenkern — unterschiedliche Dramaturgie. Jede Plattform bekommt eine eigene Aufbereitung, aber nie einen anderen Kern.</p>
+
+    <h3 style="color:#fff; margin-bottom:12px; font-weight:500">Plattform-Prioritäten</h3>
+    <div class="platforms">
+      <div class="plat"><div class="plnum">01</div><h4>Instagram</h4><p>Primärkanal — höchste Investition. Reels, Stories, Carousels.</p><div class="plmeta" data-cc-id="cc-4" style="">Daily · &gt;10.500 Follower</div></div>
+      <div class="plat"><div class="plnum">02</div><h4>Facebook</h4><p>Community, Events, ältere Zielgruppe.</p><div class="plmeta">3–4×/Woche · ~1.420 Likes</div></div>
+      <div class="plat"><div class="plnum">03</div><h4>LinkedIn</h4><p>B2B, Teambuilding-Leads, Gründer-Content.</p><div class="plmeta">2–3×/Woche · B2B-Fokus</div></div>
+      <div class="plat"><div class="plnum">04</div><h4>YouTube</h4><p>Tiefe Inhalte, Prozess-Dokumentation, SEO-Langzeit.</p><div class="plmeta">Projektweise · Evergreen</div></div>
+      <div class="plat"><div class="plnum">05</div><h4>Threads</h4><p>Spontan, ungefiltert, persönliche Gedanken.</p><div class="plmeta">Nach Bedarf · Authentisch</div></div>
+    </div>
+
+    <h3 style="color:#fff; margin-bottom:12px; font-weight:500">Die 5 Content-Pillars</h3>
+    <div class="pillars6">
+      <div class="p6"><div class="p6n">01</div><h4>Handwerk &amp; Making</h4><p>Was gebaut wird, wie es entsteht — Materialien, Techniken, Behind-the-Scenes.</p></div>
+      <div class="p6"><div class="p6n">02</div><h4>Menschen &amp; Community</h4><p>Teilnehmer:innen-Stories, Duo-Momente, Community-Einblicke. Die Werkstatt lebt durch ihre Menschen.</p></div>
+      <div class="p6"><div class="p6n">03</div><h4>Purpose &amp; Impact</h4><p>Caritas-Kooperation (Ziel 2025: 25 Wohnungen), Teambuilding-Cases. Stärkste B2B-Differenzierung.</p></div>
+      <div class="p6"><div class="p6n">04</div><h4>Inspiration &amp; Haltung</h4><p>Gegenpol-Posts (digital vs. real), Gründergedanken, Kundenstimmen. Kurz, pointiert.</p></div>
+      <div class="p6"><div class="p6n">05</div><h4>Kultur &amp; Kooperationen</h4><p>DO SOMETHING LIVE — Konzert-Dokumentation. Künstler:innen in der Werkstatt. Werkstattkultur.</p></div>
+    </div>
+
+    <h3 style="color:#fff; margin-bottom:12px; font-weight:500">Post-Struktur</h3>
+    <div class="poststruct">
+      <div class="ps"><h4>HOOK</h4><p>Erster Satz muss Neugier erzeugen oder überraschen</p></div>
+      <div class="ps"><h4>STORY</h4><p>Was ist passiert? Kurz, konkret, menschlich</p></div>
+      <div class="ps"><h4>BEDEUTUNG</h4><p>Warum ist das relevant oder interessant?</p></div>
+      <div class="ps"><h4>CTA</h4><p>Frage an die Community, Einladung oder Kurshinweis</p></div>
+    </div>
+
+    <h3 style="color:#fff; margin-bottom:12px; font-weight:500">Content-Kalender</h3>
+    <div class="cal">
+      <div class="calrow"><span class="cday">Mo / Di</span><span class="ctype">Making &amp; Prozess</span><span class="cdesc">Werkstatt zeigen, was gebaut wird</span></div>
+      <div class="calrow"><span class="cday">Mi</span><span class="ctype">Community &amp; Menschen</span><span class="cdesc">Teilnehmer:innen-Stories, Duo-Momente</span></div>
+      <div class="calrow"><span class="cday">Do</span><span class="ctype">B2B / LinkedIn-Fokus</span><span class="cdesc">Teambuilding, Purpose, Caritas-Impact</span></div>
+      <div class="calrow"><span class="cday">Fr</span><span class="ctype">Inspiration &amp; Kultur</span><span class="cdesc">DO SOMETHING LIVE, Build Fiction, Haltung</span></div>
+      <div class="calrow"><span class="cday">Sa / So</span><span class="ctype">Kurse &amp; Events</span><span class="cdesc">Ankündigungen, Gutscheine, freie Plätze</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 12 QUALITÄTS-CHECKLISTE -->
+<section id="check">
+  <div class="label">12 — Qualitäts-Checkliste</div>
+  <h2>Fünf Fragen vor jedem Post</h2>
+  <p class="intro">Vor jeder Veröffentlichung. Fünf Fragen — mindestens drei müssen stimmen.</p>
+  <div class="checklist">
+    <div class="cl"><span class="clk">Konsistenz</span><span class="clq">Passt der Post zur Marke? Würden Jan oder Philipp das so sagen?</span></div>
+    <div class="cl"><span class="clk">Relevanz</span><span class="clq">Ist der Inhalt für die Community wirklich interessant — oder nur intern bedeutsam?</span></div>
+    <div class="cl"><span class="clk">Effizienz</span><span class="clq">Kann der Content (mit Anpassung) auf mehreren Plattformen genutzt werden?</span></div>
+    <div class="cl"><span class="clk">Ecosystem</span><span class="clq">Ist der Post Teil eines größeren Narrativs — oder ein isolierter Einzelschuss?</span></div>
+    <div class="cl"><span class="clk">Value</span><span class="clq">Bietet er Mehrwert? (Inspiration / Wissen / Emotion / Unterhaltung)</span></div>
+  </div>
+  <div class="clrule">Entscheidungsregel: Mindestens 3 von 5 Kriterien müssen erfüllt sein. Wenn keines stimmt: nicht posten.</div>
+
+  <div class="questionlist">
+    <h4>Content auch nach diesen Fragen prüfen</h4>
+    <ul>
+      <li>Spreche ich zu Menschen oder zu „Zielgruppen"?</li>
+      <li>Gibt es ein konkretes Bild / eine Sensation in diesem Text?</li>
+      <li>Habe ich nicht gesagt, was nicht nötig ist?</li>
+      <li>Bin ich stolz auf das, wovon ich spreche?</li>
+      <li>Habe ich ein Buzzword verwendet, das ich in keinem Gespräch sagen würde?</li>
+      <li>Habe ich jemandem Angst gemacht, um ihn zum Handeln zu bewegen? → Falls ja: umschreiben.</li>
+    </ul>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- LOGO -->
+<section id="logo">
+  <div class="label">03 — Visuelles Herzstück</div>
+  <h2>Logo</h2>
+  <p class="intro">Das DSGS-Logo ist ein kreisförmiges Siegel mit dem Schriftzug „DO SOMETHING GREAT SOCIETY EST. 2022". Es vereint Tradition und Moderne.</p>
+
+  <h3 style="margin-bottom: 24px;">Logo-Varianten</h3>
+  <div class="logo-row">
+    <div class="lv lv-light">
+      <img src="assets/logo-black-circle.png" alt="DSGS Logo schwarz">
+      <span>Schwarz auf hell</span>
+    </div>
+    <div class="lv lv-orange">
+      <img src="assets/logo-white-pos-1.png" alt="DSGS Logo weiß auf Orange" style="filter: invert(1) brightness(2);">
+      <span>Weiß auf Orange</span>
+    </div>
+    <div class="lv lv-terracotta">
+      <img src="assets/logo-white-pos-2.png" alt="DSGS Logo weiß auf Terracotta" style="filter: invert(1) brightness(2);">
+      <span>Weiß auf Terracotta</span>
+    </div>
+    <div class="lv lv-gold">
+      <img src="assets/logo-white-pos-1.png" alt="DSGS Logo weiß auf Gold" style="filter: invert(1) brightness(2);">
+      <span>Weiß auf Gold</span>
+    </div>
+    <div class="lv lv-dark">
+      <img src="assets/logo-white-pos-1.png" alt="DSGS Logo weiß auf Schwarz" style="filter: invert(1) brightness(2);">
+      <span>Weiß auf Dunkel</span>
+    </div>
+    <div class="lv lv-light">
+      <img src="assets/logo-round.png" alt="DSGS Logo rund">
+      <span>Rundes Siegel</span>
+    </div>
+  </div>
+
+  <h3 style="margin-bottom: 16px; margin-top: 32px;">Logo-Richtlinien</h3>
+  <div class="rules-grid">
+    <div class="rule do">
+      <h4>✓ Do</h4>
+      <ul>
+        <li>Logo auf hellen, neutralen Hintergründen</li>
+        <li>Weiße Version auf Markenfarben (Orange, Terracotta, Gold)</li>
+        <li>Mindestgröße 40px Durchmesser einhalten</li>
+        <li>Freizone: 15% des Logo-Durchmessers auf allen Seiten</li>
+        <li>Proportionen immer erhalten</li>
+      </ul>
+    </div>
+    <div class="rule dont">
+      <h4>✗ Don't</h4>
+      <ul>
+        <li>Nicht verzerren oder einseitig skalieren</li>
+        <li>Keine eigenmächtigen Farbänderungen</li>
+        <li>Nicht auf komplexen, kontrastarmen Hintergründen</li>
+        <li>Nicht rotieren ohne Abstimmung</li>
+        <li>Keine Schatten oder Effekte ohne Abstimmung</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- FARBEN -->
+<div class="band band-white" id="farben">
+  <div class="band-inner">
+    <div class="label">04 — Unsere Farben</div>
+    <h2>Farbpalette</h2>
+    <p class="intro">Warme, erdige Töne — sie spiegeln die Materialien wider, mit denen wir arbeiten: Holz, Erde, natürliche Pigmente.</p>
+
+    <h3 style="margin-bottom:20px">Primärfarben</h3>
+    <div class="farb-grid">
+      <div class="swatch"><div class="cb" style="background:#DDB85C"></div><div class="ci"><div class="cn">Gold</div><div class="ch">#DDB85C<br>RGB 221 184 92</div></div></div>
+      <div class="swatch"><div class="cb" style="background:#D97757"></div><div class="ci"><div class="cn">Orange</div><div class="ch">#D97757<br>RGB 217 119 87</div></div></div>
+      <div class="swatch"><div class="cb" style="background:#C17B6B"></div><div class="ci"><div class="cn">Terracotta</div><div class="ch">#C17B6B<br>RGB 193 123 107</div></div></div>
+      <div class="swatch"><div class="cb" style="background:#D8A391"></div><div class="ci"><div class="cn">Peach</div><div class="ch">#D8A391<br>RGB 216 163 145</div></div></div>
+      <div class="swatch"><div class="cb" style="background:#D6C9B0"></div><div class="ci"><div class="cn">Sand</div><div class="ch">#D6C9B0<br>RGB 214 201 176</div></div></div>
+      <div class="swatch"><div class="cb" style="background:#E8DCC8; border:1px solid #D6C9B0"></div><div class="ci"><div class="cn">Cream</div><div class="ch">#E8DCC8<br>RGB 232 220 200</div></div></div>
+    </div>
+
+    <h3 style="margin-bottom:20px; margin-top:40px">Akzentfarben</h3>
+    <div class="farb-grid-3">
+      <div class="swatch"><div class="cb" style="background:#81A1AC"></div><div class="ci"><div class="cn">Teal</div><div class="ch">#81A1AC · RGB 129 161 172</div></div></div>
+      <div class="swatch"><div class="cb" style="background:#A7BAA0"></div><div class="ci"><div class="cn">Sage</div><div class="ch">#A7BAA0 · RGB 167 186 160</div></div></div>
+      <div class="swatch"><div class="cb" style="background:#5B8BA0"></div><div class="ci"><div class="cn">Ocean</div><div class="ch">#5B8BA0 · RGB 91 139 160</div></div></div>
+    </div>
+
+    <div class="farb-use">
+      <div><h4>🟡 Hauptfarben</h4><p>Gold, Orange, Terracotta für Header, Hero und große Farbflächen.</p></div>
+      <div><h4>🫧 Hintergründe</h4><p>Cream und Sand für ruhige, atmende Hintergründe.</p></div>
+      <div><h4>💙 Akzente</h4><p>Teal, Sage, Ocean sparsam für Kontrast und CTAs.</p></div>
+    </div>
+  </div>
+</div>
+
+<hr class="div">
+
+<!-- TYPOGRAFIE -->
+<section id="typografie">
+  <div class="label">05 — Schrift &amp; Hierarchie</div>
+  <h2>Typografie</h2>
+  <p class="intro">Zwei Schriftfamilien — eine für emotionale Headlines, eine für alles andere. Plus Inter als technische Alternative.</p>
+  <div class="typo-list">
+    <div class="typo-row">
+      <div class="tm"><div class="tl">H1</div><div class="ts">Playfair Display<br>Regular · 48px<br>Leading 1.1</div></div>
+      <div class="th1">Schön schräg statt langweilig gerade.</div>
+    </div>
+    <div class="typo-row">
+      <div class="tm"><div class="tl">H2</div><div class="ts">Playfair Display<br>Regular · 36px<br>Leading 1.2</div></div>
+      <div class="th2">Werkstatt Schnuppern</div>
+    </div>
+    <div class="typo-row">
+      <div class="tm"><div class="tl">H3</div><div class="ts">Wix Madefor Text<br>Medium · 22px</div></div>
+      <div class="th3">Kurse für alle Level</div>
+    </div>
+    <div class="typo-row">
+      <div class="tm"><div class="tl">H4</div><div class="ts">Wix Madefor Text<br>Medium · 18px</div></div>
+      <div class="th4">Bau Dein eigenes Möbelstück</div>
+    </div>
+    <div class="typo-row">
+      <div class="tm"><div class="tl">H5</div><div class="ts">Wix Madefor Text<br>Medium · 14px</div></div>
+      <div class="th5">5 Wochen Basiskurs</div>
+    </div>
+    <div class="typo-row">
+      <div class="tm"><div class="tl">H6</div><div class="ts">Wix Madefor Text<br>Medium · 12px</div></div>
+      <div class="th6">Teambuilding Workshop</div>
+    </div>
+    <div class="typo-row">
+      <div class="tm"><div class="tl">Body</div><div class="ts">Wix Madefor Text<br>Regular · 16px<br>Leading 1.65</div></div>
+      <div class="tbody">Der perfekte Einstieg: Lerne die Werkstatt, Maschinen und Materialien kennen. In diesem dreistündigen Schnupperkurs bekommst du einen Überblick über unsere Möglichkeiten und fertigst dein erstes kleines Werkstück an.</div>
+    </div>
+    <div class="typo-row">
+      <div class="tm"><div class="tl">Small</div><div class="ts">Wix Madefor Text<br>Regular · 12px</div></div>
+      <div class="tsmall">Kleingedrucktes, Metadaten, Captions und rechtliche Hinweise.</div>
+    </div>
+    <div class="typo-row">
+      <div class="tm"><div class="tl">Label</div><div class="ts">Wix Madefor Text<br>Bold · 11px<br>Uppercase + Tracking</div></div>
+      <div class="tlbl">Werkstatt Abo · Wien · Seit 2022</div>
+    </div>
+    <div class="typo-row">
+      <div class="tm"><div class="tl">Alternative</div><div class="ts">Inter<br>Regular · 16px<br>Fallback für UI</div></div>
+      <div class="talt">Inter dient als technischer Fallback für digitale Anwendungen und UI-Komponenten, wenn Wix Madefor Text nicht verfügbar ist.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- BILDWELT -->
+<div class="band band-sand" id="icons">
+  <div class="band-inner">
+    <div class="label">06 — Visuelles System</div>
+    <h2>Iconsprache &amp; Bildwelt</h2>
+    <p class="intro">Geometrisch, abstrakt, handwerklich. Jede visuelle Aussage transportiert das Gefühl von Material, Werkzeug und Gemeinschaft.</p>
+
+    <h3 style="margin-bottom:20px">Gestaltungsprinzipien der Icons</h3>
+    <div class="principles">
+      <div class="princ"><div class="pi">◻</div><h4>Geometrische Formen</h4><p>Rechtecke, Dreiecke, Kreise — schräg arrangiert, nie perfekt ausgerichtet.</p></div>
+      <div class="princ"><div class="pi">🎨</div><h4>Warme Farbflächen</h4><p>Icons auf Markenfarben Gold, Orange, Terracotta. Kühle Akzente sparsam.</p></div>
+      <div class="princ"><div class="pi">🪚</div><h4>Werkzeug-Motive</h4><p>Stilisierte Darstellungen von Säge, Hobel, Pinsel — immer reduziert.</p></div>
+      <div class="princ"><div class="pi">◇</div><h4>Subtiles Layering</h4><p>Überlappende Formen in verschiedenen Opacity-Stufen erzeugen Tiefe.</p></div>
+      <div class="princ"><div class="pi">☁</div><h4>Weiche Schatten</h4><p>0 8px 24px rgba(0,0,0,0.12) — Tiefe wie ein Objekt auf dem Tisch.</p></div>
+      <div class="princ"><div class="pi">📐</div><h4>Großzügige Abstände</h4><p>Luftig, nie gedrängt. Raum ist Teil der Gestaltung.</p></div>
+    </div>
+
+    <h3 style="margin-bottom:20px">Kurs-Icons im Einsatz</h3>
+    <p style="max-width:640px; margin-bottom:32px">Jedes Kursangebot hat ein eigenes Header-Icon im Breitformat (1280×477), das seine Charakteristik visuell transportiert. Die Icons werden als Header-Bilder auf Website, Flyern und in Kurskarten eingesetzt — ungeschnitten, in voller Bildfläche.</p>
+    <div class="kurs-icon-grid">
+      <div class="kurs-icon">
+        <div class="kurs-icon__box"><img src="assets/icons/schnupperkurs.png" alt="Schnupperkurs"></div>
+        <div class="kurs-icon__label">Schnupperkurs</div>
+      </div>
+      <div class="kurs-icon">
+        <div class="kurs-icon__box"><img src="assets/icons/basiskurs.png" alt="Basiskurs"></div>
+        <div class="kurs-icon__label">Basiskurs</div>
+      </div>
+      <div class="kurs-icon">
+        <div class="kurs-icon__box"><img src="assets/icons/basis-kompakt.png" alt="Basis Kompakt"></div>
+        <div class="kurs-icon__label">Basis Kompakt</div>
+      </div>
+      <div class="kurs-icon">
+        <div class="kurs-icon__box"><img src="assets/icons/bau-dein-moebelstueck.png" alt="Bau dein Möbelstück"></div>
+        <div class="kurs-icon__label">Bau dein Möbelstück</div>
+      </div>
+      <div class="kurs-icon">
+        <div class="kurs-icon__box"><img src="assets/icons/restauriere-dein-moebelstueck.png" alt="Restauriere dein Möbelstück"></div>
+        <div class="kurs-icon__label">Restauriere dein Möbelstück</div>
+      </div>
+      <div class="kurs-icon">
+        <div class="kurs-icon__box"><img src="assets/icons/me-mini-me.png" alt="Me &amp; Mini Me"></div>
+        <div class="kurs-icon__label">Me &amp; Mini Me</div>
+      </div>
+      <div class="kurs-icon">
+        <div class="kurs-icon__box"><img src="assets/icons/holzverbindungen.png" alt="Holzverbindungen"></div>
+        <div class="kurs-icon__label">Holzverbindungen</div>
+      </div>
+      <div class="kurs-icon">
+        <div class="kurs-icon__box"><img src="assets/icons/oberflaechenkurs.png" alt="Oberflächenkurs"></div>
+        <div class="kurs-icon__label">Oberflächenkurs</div>
+      </div>
+      <div class="kurs-icon">
+        <div class="kurs-icon__box"><img src="assets/icons/schneidbrett.png" alt="Schneidbrett"></div>
+        <div class="kurs-icon__label">Schneidbrett</div>
+      </div>
+      <div class="kurs-icon">
+        <div class="kurs-icon__box"><img src="assets/icons/bilderrahmen.png" alt="Bilderrahmen"></div>
+        <div class="kurs-icon__label">Bilderrahmen</div>
+      </div>
+      <div class="kurs-icon">
+        <div class="kurs-icon__box"><img src="assets/icons/geburtstagsfest.png" alt="Geburtstagsfest"></div>
+        <div class="kurs-icon__label">Geburtstagsfest</div>
+      </div>
+      <div class="kurs-icon">
+        <div class="kurs-icon__box"><img src="assets/icons/sommercamp.png" alt="Sommercamp"></div>
+        <div class="kurs-icon__label">Sommercamp</div>
+      </div>
+    </div>
+
+    <h3 style="margin-bottom:20px">Fotografie — Unsere Bildwelt</h3>
+    <p style="max-width:640px; margin-bottom:24px">Authentische Workshop-Situationen, Handwerk in Aktion und fertige Werkstücke — aus unserer echten Werkstatt in Wien.</p>
+    <div class="foto-gallery">
+      <img src="assets/photos/werkstatt-gruppe.jpg" alt="Workshop-Gruppe mit fertigen Stühlen">
+      <img src="assets/photos/werkbaenke.jpg" alt="Werkbänke in der Werkstatt">
+      <img src="assets/photos/logo-detail.jpg" alt="Werkstatt mit DSGS Logo">
+      <img src="assets/photos/werkzeuge.jpg" alt="Hobel und Werkzeuge im Detail">
+      <img src="assets/photos/beanie-rot.jpg" alt="Teilnehmerin beim Sägen">
+      <img src="assets/photos/erklaerung.jpg" alt="Kursleiter erklärt Werkstück">
+      <img src="assets/photos/holzlager.jpg" alt="Holzlager mit Brettern">
+      <img src="assets/photos/werkstatt-weit.jpg" alt="Werkstatt Totale">
+      <img src="assets/photos/erwachsener-kind.jpg" alt="Erwachsener und Kind an der Säge">
+      <img src="assets/photos/saege-gelb.jpg" alt="Teilnehmerin mit gelber Mütze an der Maschine">
+      <img src="assets/photos/bohren-gemeinsam.jpg" alt="Gemeinsames Bohren">
+      <img src="assets/photos/familie-messen.jpg" alt="Familie beim gemeinsamen Messen">
+    </div>
+
+    <div class="foto-grid">
+      <div class="foto fdo"><h4>✓ Verwende</h4>
+        <ul>
+          <li>Echte Teilnehmer·innen, echte Werkstücke — keine Stockfotos</li>
+          <li>Hände bei der Arbeit, Details von Holzbearbeitung</li>
+          <li>Natürliches Licht, warme Holztöne</li>
+          <li>Sägespäne, Werkzeugspuren, Work-in-Progress-Momente</li>
+          <li>Menschen beim gemeinsamen Schaffen</li>
+        </ul>
+      </div>
+      <div class="foto fdont"><h4>✗ Vermeide</h4>
+        <ul>
+          <li>Überinszenierte Studio-Fotos</li>
+          <li>Sterile, aufgeräumte Umgebungen ohne Charakter</li>
+          <li>Hochglanz-Stockbilder oder Modelfotos</li>
+          <li>Kühle, industrielle Ästhetik</li>
+          <li>Stark gefilterte oder entsättigte Bilder</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div">
+
+<!-- BRAND VOICE -->
+<section id="voice">
+  <div class="label">07 — Wie wir klingen</div>
+  <h2>Brand Voice &amp; Tonalität</h2>
+  <p class="intro">DSGS spricht wie ein guter Freund, der handwerklich kompetent ist — direkt, warm, ohne Buzzwords, mit Begeisterung fürs Machen.</p>
+  <div class="voice-grid">
+    <div class="vc vcy"><h4>✓ Unsere Stimme</h4>
+      <div class="ve">„Lerne Tischlern. Kein Vorwissen nötig."</div>
+      <div class="ve">„In drei Stunden machst du dein erstes Werkstück."</div>
+      <div class="ve">„Bring dich ein. Wir bringen das Holz."</div>
+      <div class="ve">„Schön schräg ist besser als langweilig gerade."</div>
+    </div>
+    <div class="vc vcn"><h4>✗ Nicht so</h4>
+      <div class="ve">„Entdecken Sie das transformative Potenzial unserer hochwertigen Bildungsangebote."</div>
+      <div class="ve">„Optimieren Sie Ihre Work-Life-Balance durch kreative Aktivitäten."</div>
+      <div class="ve">„Premium-Handwerksworkshops für anspruchsvolle Kundschaft."</div>
+    </div>
+  </div>
+  <div class="pillars">
+    <div class="pillar"><span class="pw">Direkt</span><p>Kurze Sätze. Kein Konjunktiv. Wir sagen was wir meinen.</p></div>
+    <div class="pillar"><span class="pw">Warm</span><p>Wir duzen. Wir laden ein. Niemand wird ausgeschlossen.</p></div>
+    <div class="pillar"><span class="pw">Ehrlich</span><p>Imperfektion ist kein Fehler. Wir versprechen nichts, was wir nicht halten.</p></div>
+    <div class="pillar"><span class="pw">Handwerklich</span><p>Wir kennen das Handwerk. Fachbegriffe ja — Buzzwords nein.</p></div>
+    <div class="pillar"><span class="pw">Schräg</span><p>„Schön schräg" ist Programm, kein Zufall.</p></div>
+    <div class="pillar"><span class="pw">Society</span><p>„Wir" statt „ich". Werkstatt als sozialer Ort.</p></div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- GESTALTUNG -->
+<div class="band band-cream" id="gestaltung">
+  <div class="band-inner">
+    <div class="label">08 — Wie wir gestalten</div>
+    <h2>Gestaltungsprinzipien</h2>
+    <p class="intro">Sechs Regeln, die aus der Marke ein konsistentes visuelles Erlebnis machen.</p>
+    <div class="gest-grid">
+      <div class="gc"><span class="gn">01</span><h4>Warme Farbflächen zuerst</h4><p>Gold, Orange, Terracotta für große Flächen. Cream und Sand für Ruhe. Kühle Akzente nur für Kontrast.</p></div>
+      <div class="gc"><span class="gn">02</span><h4>Playfair für Emotionen</h4><p>H1 und H2 in Playfair Display — das schafft Persönlichkeit. Alles andere in Wix Madefor Text.</p></div>
+      <div class="gc"><span class="gn">03</span><h4>Geometrie mit Schräge</h4><p>Subtile Dreiecke, gedrehte Kreise. Nie zu symmetrisch — das Schiefe ist gewollt.</p></div>
+      <div class="gc"><span class="gn">04</span><h4>Luft und Raum</h4><p>Großzügige Abstände. Padding mindestens 32px bei Karten, 48px bei Sections.</p></div>
+      <div class="gc"><span class="gn">05</span><h4>Haptische Tiefe</h4><p>Weiche Schatten: 0 8px 24px rgba(0,0,0,0.12). Tiefe durch Layering, nicht Härte.</p></div>
+      <div class="gc"><span class="gn">06</span><h4>Authentizität vor Perfektion</h4><p>Echte Fotos, echte Menschen, echte Werkstücke. Das Unperfekte ist ein Qualitätsmerkmal.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ANWENDUNG -->
+<div class="band band-dark" id="anwendung">
+  <div class="band-inner">
+    <div class="label">09 — Marke in Aktion</div>
+    <h2>Anwendungsbeispiele</h2>
+    <p class="intro">So sieht DSGS im Alltag aus — auf Kurskarten, im Website-Hero und in der Kommunikation.</p>
+    <div class="anw-grid">
+      <div class="ac">
+        <div class="ac-head">
+          <span class="ac-badge">BFF Aktion</span>
+          <img src="assets/icons/schnupperkurs.png" alt="Schnupperkurs">
+        </div>
+        <div class="ac-body">
+          <p class="meta">⏱ 3 Stunden · Do 18–21 Uhr</p>
+          <h4>Werkstatt Schnuppern</h4>
+          <p>Der perfekte Einstieg: Lerne die Werkstatt, Maschinen und Materialien kennen.</p>
+          <span class="cta" style="background:var(--orange)">Jetzt buchen →</span>
+        </div>
+      </div>
+      <div class="ac">
+        <div class="ac-head">
+          <span class="ac-badge">Bestseller</span>
+          <img src="assets/icons/bau-dein-moebelstück.png" alt="Bau dein Möbelstück">
+        </div>
+        <div class="ac-body">
+          <p class="meta">⏱ 5 × 3 Stunden</p>
+          <h4>Bau Dein Möbelstück</h4>
+          <p>In fünf Einheiten entsteht dein individuelles Möbelstück unter professioneller Anleitung.</p>
+          <span class="cta" style="background:var(--terracotta)">Kurs entdecken →</span>
+        </div>
+      </div>
+      <div class="ac">
+        <div class="ac-head">
+          <span class="ac-badge">Community</span>
+          <img src="assets/icons/basiskurs.png" alt="Werkstatt Abo">
+        </div>
+        <div class="ac-body">
+          <p class="meta">⏱ Flexibel · Monatlich</p>
+          <h4>Werkstatt Abo</h4>
+          <p>Nutze die Werkstatt jederzeit. Maschinen, Material und Community inklusive.</p>
+          <span class="cta" style="background:var(--teal)">Abo ansehen →</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-ex">
+      <h3>Schön schräg statt<br>langweilig gerade.</h3>
+      <p>Lerne Tischlern mit Sinn. Workshops für alle Level in unserer Werkstatt in Wien.</p>
+      <div class="hero-btns">
+        <button class="btn-p">Kurse entdecken</button>
+        <button class="btn-s">Werkstatt schnuppern</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL -->
+<div class="final-band">
+  <img src="assets/logo-white-pos-1.png" alt="DSGS Logo" style="filter: invert(1) brightness(2);">
+  <h2>Do Something Great</h2>
+  <p>Für Fragen zur Marke oder Unterstützung bei der Anwendung dieser Guidelines kontaktiere uns.</p>
+  <p><a href="mailto:hello@dosomethinggreat.work">hello@dosomethinggreat.work</a></p>
+</div>
+
+<footer>
+  <p><strong style="color:var(--gold)">DO SOMETHING GREAT SOCIETY</strong> · Brandbook 2026 · Alle Rechte vorbehalten</p>
+</footer>
+
+
+
+</body></html>
